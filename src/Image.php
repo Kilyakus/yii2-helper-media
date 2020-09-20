@@ -61,7 +61,7 @@ class Image
 				'thumbnail'
 			);
 		}else{
-			$path = __DIR__ . DIRECTORY_SEPARATOR . 'noimage.jpg';
+			$path = __DIR__ . '/assets/img/noimage.jpg';
 			$thumbName = Upload::traitName(
 				$path, 
 				(int)$width, 
@@ -147,7 +147,7 @@ class Image
 
 		if(!(!empty($fileName) && ($path = Yii::getAlias('@webroot') . $fileName) && is_file($path)))
 		{
-			$path = __DIR__ . DIRECTORY_SEPARATOR . 'noimage.jpg';
+			$path = __DIR__ . '/assets/img/noimage.jpg';
 		}
 
 		$imageData = pathinfo($path);
@@ -218,7 +218,7 @@ class Image
 
 		$file = Yii::getAlias('@webroot') . $fileName;
 
-		$fileName = '/' . Upload::$UPLOADS_DIR . '/thumbs/bump-'.md5($fileName).'.jpg';
+		$fileName = '/' . Upload::$UPLOADS_DIR . '/thumbs/bump-' . md5($fileName) . '.jpg';
 		$temp = Yii::getAlias('@webroot') . $fileName;
 		if(!file_exists($temp)){
 			copy($file, $temp);

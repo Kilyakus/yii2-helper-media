@@ -3,6 +3,7 @@ namespace kilyakus\helper\media;
 
 use Yii;
 use yii\helpers\Html;
+use kilyakus\helper\media\bundles as Bundle;
 
 class Preloader
 {
@@ -41,7 +42,7 @@ class Preloader
 
         $view = Yii::$app->view;
 
-        PreloaderAsset::register($view);
+        Bundle\PreloaderAsset::register($view);
 
         $view->registerCss('#' . $attributes['id'] . ' {background-size:cover;background-position:center;}');
 
