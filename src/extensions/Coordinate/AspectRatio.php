@@ -11,7 +11,7 @@
 
 namespace kilyakus\helper\media\extensions\Coordinate;
 
-use FFMpeg\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
 
 // see http://en.wikipedia.org/wiki/List_of_common_resolutions
 class AspectRatio

@@ -11,9 +11,9 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Audio;
 
-use FFMpeg\Filters\Audio\AddMetadataFilter;
-use FFMpeg\Media\Audio;
-use FFMpeg\Coordinate\TimeCode;
+use kilyakus\helper\media\extensions\Filters\Audio\AddMetadataFilter;
+use kilyakus\helper\media\extensions\Media\Audio;
+use kilyakus\helper\media\extensions\Coordinate\TimeCode;
 
 class AudioFilters
 {

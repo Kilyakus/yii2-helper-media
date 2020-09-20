@@ -11,8 +11,8 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Concat;
 
-use FFMpeg\Filters\FilterInterface;
-use FFMpeg\Media\Concat;
+use kilyakus\helper\media\extensions\Filters\FilterInterface;
+use kilyakus\helper\media\extensions\Media\Concat;
 
 interface ConcatFilterInterface extends FilterInterface
 {

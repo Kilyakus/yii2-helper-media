@@ -11,8 +11,8 @@
 
 namespace kilyakus\helper\media\extensions\Media;
 
-use FFMpeg\FFProbe\DataMapping\Format;
-use FFMpeg\FFProbe\DataMapping\StreamCollection;
+use kilyakus\helper\media\extensions\FFProbe\DataMapping\Format;
+use kilyakus\helper\media\extensions\FFProbe\DataMapping\StreamCollection;
 
 abstract class AbstractStreamableMedia extends AbstractMediaType
 {

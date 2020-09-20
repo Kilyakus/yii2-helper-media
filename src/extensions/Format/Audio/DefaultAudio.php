@@ -12,12 +12,12 @@
 namespace kilyakus\helper\media\extensions\Format\Audio;
 
 use Evenement\EventEmitter;
-use FFMpeg\Exception\InvalidArgumentException;
-use FFMpeg\Format\AudioInterface;
-use FFMpeg\Media\MediaTypeInterface;
-use FFMpeg\Format\ProgressableInterface;
-use FFMpeg\Format\ProgressListener\AudioProgressListener;
-use FFMpeg\FFProbe;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\Format\AudioInterface;
+use kilyakus\helper\media\extensions\Media\MediaTypeInterface;
+use kilyakus\helper\media\extensions\Format\ProgressableInterface;
+use kilyakus\helper\media\extensions\Format\ProgressListener\AudioProgressListener;
+use kilyakus\helper\media\extensions\FFProbe;
 
 abstract class DefaultAudio extends EventEmitter implements AudioInterface, ProgressableInterface
 {

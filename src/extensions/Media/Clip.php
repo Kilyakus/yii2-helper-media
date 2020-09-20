@@ -1,10 +1,10 @@
 <?php
 namespace kilyakus\helper\media\extensions\Media;
 
-use FFMpeg\Driver\FFMpegDriver;
-use FFMpeg\FFProbe;
-use FFMpeg\Coordinate\TimeCode;
-use FFMpeg\Format\FormatInterface;
+use kilyakus\helper\media\extensions\Driver\FFMpegDriver;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Coordinate\TimeCode;
+use kilyakus\helper\media\extensions\Format\FormatInterface;
 
 /**
  * Video clip.

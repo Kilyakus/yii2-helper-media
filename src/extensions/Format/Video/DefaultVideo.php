@@ -11,12 +11,12 @@
 
 namespace kilyakus\helper\media\extensions\Format\Video;
 
-use FFMpeg\FFProbe;
-use FFMpeg\Exception\InvalidArgumentException;
-use FFMpeg\Format\Audio\DefaultAudio;
-use FFMpeg\Format\VideoInterface;
-use FFMpeg\Media\MediaTypeInterface;
-use FFMpeg\Format\ProgressListener\VideoProgressListener;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\Format\Audio\DefaultAudio;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Media\MediaTypeInterface;
+use kilyakus\helper\media\extensions\Format\ProgressListener\VideoProgressListener;
 
 /**
  * The abstract default Video format

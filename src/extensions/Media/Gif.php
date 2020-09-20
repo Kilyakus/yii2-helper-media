@@ -12,13 +12,13 @@
 namespace kilyakus\helper\media\extensions\Media;
 
 use Alchemy\BinaryDriver\Exception\ExecutionFailureException;
-use FFMpeg\Filters\Gif\GifFilterInterface;
-use FFMpeg\Filters\Gif\GifFilters;
-use FFMpeg\Driver\FFMpegDriver;
-use FFMpeg\FFProbe;
-use FFMpeg\Exception\RuntimeException;
-use FFMpeg\Coordinate\TimeCode;
-use FFMpeg\Coordinate\Dimension;
+use kilyakus\helper\media\extensions\Filters\Gif\GifFilterInterface;
+use kilyakus\helper\media\extensions\Filters\Gif\GifFilters;
+use kilyakus\helper\media\extensions\Driver\FFMpegDriver;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Coordinate\TimeCode;
+use kilyakus\helper\media\extensions\Coordinate\Dimension;
 
 class Gif extends AbstractMediaType
 {

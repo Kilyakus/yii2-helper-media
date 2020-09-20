@@ -12,12 +12,12 @@
 namespace kilyakus\helper\media\extensions;
 
 use Alchemy\BinaryDriver\ConfigurationInterface;
-use FFMpeg\Driver\FFMpegDriver;
-use FFMpeg\Exception\InvalidArgumentException;
-use FFMpeg\Exception\RuntimeException;
-use FFMpeg\Media\Audio;
-use FFMpeg\Media\AdvancedMedia;
-use FFMpeg\Media\Video;
+use kilyakus\helper\media\extensions\Driver\FFMpegDriver;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Media\Audio;
+use kilyakus\helper\media\extensions\Media\AdvancedMedia;
+use kilyakus\helper\media\extensions\Media\Video;
 use Psr\Log\LoggerInterface;
 
 class FFMpeg

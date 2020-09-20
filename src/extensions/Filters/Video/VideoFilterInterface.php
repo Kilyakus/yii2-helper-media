@@ -11,9 +11,9 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Video;
 
-use FFMpeg\Filters\FilterInterface;
-use FFMpeg\Format\VideoInterface;
-use FFMpeg\Media\Video;
+use kilyakus\helper\media\extensions\Filters\FilterInterface;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Media\Video;
 
 interface VideoFilterInterface extends FilterInterface
 {

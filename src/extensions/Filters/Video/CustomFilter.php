@@ -10,8 +10,8 @@
  */
 namespace kilyakus\helper\media\extensions\Filters\Video;
 
-use FFMpeg\Format\VideoInterface;
-use FFMpeg\Media\Video;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Media\Video;
 
 class CustomFilter implements VideoFilterInterface
 {

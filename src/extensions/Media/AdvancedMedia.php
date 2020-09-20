@@ -3,19 +3,19 @@
 namespace kilyakus\helper\media\extensions\Media;
 
 use Alchemy\BinaryDriver\Exception\ExecutionFailureException;
-use FFMpeg\Driver\FFMpegDriver;
-use FFMpeg\Exception\RuntimeException;
-use FFMpeg\FFProbe;
-use FFMpeg\Filters\AdvancedMedia\ComplexCompatibleFilter;
-use FFMpeg\Filters\AdvancedMedia\ComplexFilterContainer;
-use FFMpeg\Filters\AdvancedMedia\ComplexFilterInterface;
-use FFMpeg\Filters\AdvancedMedia\ComplexFilters;
-use FFMpeg\Filters\FiltersCollection;
-use FFMpeg\Format\AudioInterface;
-use FFMpeg\Format\FormatInterface;
-use FFMpeg\Format\ProgressableInterface;
-use FFMpeg\Format\ProgressListener\AbstractProgressListener;
-use FFMpeg\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Driver\FFMpegDriver;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Filters\AdvancedMedia\ComplexCompatibleFilter;
+use kilyakus\helper\media\extensions\Filters\AdvancedMedia\ComplexFilterContainer;
+use kilyakus\helper\media\extensions\Filters\AdvancedMedia\ComplexFilterInterface;
+use kilyakus\helper\media\extensions\Filters\AdvancedMedia\ComplexFilters;
+use kilyakus\helper\media\extensions\Filters\FiltersCollection;
+use kilyakus\helper\media\extensions\Format\AudioInterface;
+use kilyakus\helper\media\extensions\Format\FormatInterface;
+use kilyakus\helper\media\extensions\Format\ProgressableInterface;
+use kilyakus\helper\media\extensions\Format\ProgressListener\AbstractProgressListener;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
 
 /**
  * AdvancedMedia may have multiple inputs and multiple outputs.

@@ -11,8 +11,8 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Video;
 
-use FFMpeg\Format\VideoInterface;
-use FFMpeg\Media\Video;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Media\Video;
 
 /**
  * Synchronizes audio and video in case of desynchronized movies.

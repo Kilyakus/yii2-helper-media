@@ -11,7 +11,7 @@
 
 namespace kilyakus\helper\media\extensions\Coordinate;
 
-use FFMpeg\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
 
 /**
  * Dimension object, used for manipulating width and height couples

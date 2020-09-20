@@ -2,8 +2,8 @@
 
 namespace kilyakus\helper\media\extensions\Filters\AdvancedMedia;
 
-use FFMpeg\Filters\FilterInterface;
-use FFMpeg\Media\AdvancedMedia;
+use kilyakus\helper\media\extensions\Filters\FilterInterface;
+use kilyakus\helper\media\extensions\Media\AdvancedMedia;
 
 /**
  * A filter that can be used inside "-filter_complex" option.

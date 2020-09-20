@@ -11,8 +11,8 @@
 
 namespace kilyakus\helper\media\extensions\FFProbe;
 
-use FFMpeg\FFProbe;
-use FFMpeg\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
 
 class OutputParser implements OutputParserInterface
 {

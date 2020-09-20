@@ -11,10 +11,10 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Video;
 
-use FFMpeg\Exception\InvalidArgumentException;
-use FFMpeg\Exception\RuntimeException;
-use FFMpeg\Media\Video;
-use FFMpeg\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Media\Video;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
 
 class ExtractMultipleFramesFilter implements VideoFilterInterface
 {

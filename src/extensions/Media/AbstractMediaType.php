@@ -11,9 +11,9 @@
 
 namespace kilyakus\helper\media\extensions\Media;
 
-use FFMpeg\Driver\FFMpegDriver;
-use FFMpeg\FFProbe;
-use FFMpeg\Filters\FiltersCollection;
+use kilyakus\helper\media\extensions\Driver\FFMpegDriver;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Filters\FiltersCollection;
 
 abstract class AbstractMediaType implements MediaTypeInterface
 {

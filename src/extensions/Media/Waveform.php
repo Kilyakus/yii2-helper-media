@@ -12,12 +12,12 @@
 namespace kilyakus\helper\media\extensions\Media;
 
 use Alchemy\BinaryDriver\Exception\ExecutionFailureException;
-use FFMpeg\Exception\InvalidArgumentException;
-use FFMpeg\Filters\Waveform\WaveformFilterInterface;
-use FFMpeg\Filters\Waveform\WaveformFilters;
-use FFMpeg\Driver\FFMpegDriver;
-use FFMpeg\FFProbe;
-use FFMpeg\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\Filters\Waveform\WaveformFilterInterface;
+use kilyakus\helper\media\extensions\Filters\Waveform\WaveformFilters;
+use kilyakus\helper\media\extensions\Driver\FFMpegDriver;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
 
 class Waveform extends AbstractMediaType
 {

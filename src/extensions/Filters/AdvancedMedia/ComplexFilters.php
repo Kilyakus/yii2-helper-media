@@ -2,10 +2,10 @@
 
 namespace kilyakus\helper\media\extensions\Filters\AdvancedMedia;
 
-use FFMpeg\Coordinate\Dimension;
-use FFMpeg\Filters\Video\PadFilter;
-use FFMpeg\Filters\Video\WatermarkFilter;
-use FFMpeg\Media\AdvancedMedia;
+use kilyakus\helper\media\extensions\Coordinate\Dimension;
+use kilyakus\helper\media\extensions\Filters\Video\PadFilter;
+use kilyakus\helper\media\extensions\Filters\Video\WatermarkFilter;
+use kilyakus\helper\media\extensions\Media\AdvancedMedia;
 
 class ComplexFilters
 {

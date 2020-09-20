@@ -12,8 +12,8 @@
 namespace kilyakus\helper\media\extensions\Format;
 
 use Evenement\EventEmitterInterface;
-use FFMpeg\FFProbe;
-use FFMpeg\Media\MediaTypeInterface;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Media\MediaTypeInterface;
 
 interface ProgressableInterface extends EventEmitterInterface
 {

@@ -15,8 +15,8 @@ use Alchemy\BinaryDriver\AbstractBinary;
 use Alchemy\BinaryDriver\Configuration;
 use Alchemy\BinaryDriver\ConfigurationInterface;
 use Alchemy\BinaryDriver\Exception\ExecutableNotFoundException as BinaryDriverExecutableNotFound;
-use FFMpeg\Exception\ExecutableNotFoundException;
-use FFMpeg\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Exception\ExecutableNotFoundException;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
 use Psr\Log\LoggerInterface;
 
 class FFMpegDriver extends AbstractBinary

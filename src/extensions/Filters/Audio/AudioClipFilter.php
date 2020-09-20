@@ -11,9 +11,9 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Audio;
 
-use FFMpeg\Coordinate\TimeCode;
-use FFMpeg\Format\AudioInterface;
-use FFMpeg\Media\Audio;
+use kilyakus\helper\media\extensions\Coordinate\TimeCode;
+use kilyakus\helper\media\extensions\Format\AudioInterface;
+use kilyakus\helper\media\extensions\Media\Audio;
 
 class AudioClipFilter implements AudioFilterInterface {
 

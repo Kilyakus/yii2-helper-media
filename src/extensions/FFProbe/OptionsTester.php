@@ -13,8 +13,8 @@ namespace kilyakus\helper\media\extensions\FFProbe;
 
 use Alchemy\BinaryDriver\Exception\ExecutionFailureException;
 use Doctrine\Common\Cache\Cache;
-use FFMpeg\Driver\FFProbeDriver;
-use FFMpeg\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Driver\FFProbeDriver;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
 
 class OptionsTester implements OptionsTesterInterface
 {

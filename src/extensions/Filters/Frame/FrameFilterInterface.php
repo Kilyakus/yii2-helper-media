@@ -11,8 +11,8 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Frame;
 
-use FFMpeg\Filters\FilterInterface;
-use FFMpeg\Media\Frame;
+use kilyakus\helper\media\extensions\Filters\FilterInterface;
+use kilyakus\helper\media\extensions\Media\Frame;
 
 interface FrameFilterInterface extends FilterInterface
 {

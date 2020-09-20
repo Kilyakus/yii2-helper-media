@@ -11,11 +11,11 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Video;
 
-use FFMpeg\Coordinate\Dimension;
-use FFMpeg\Filters\AdvancedMedia\ComplexCompatibleFilter;
-use FFMpeg\Format\VideoInterface;
-use FFMpeg\Media\AdvancedMedia;
-use FFMpeg\Media\Video;
+use kilyakus\helper\media\extensions\Coordinate\Dimension;
+use kilyakus\helper\media\extensions\Filters\AdvancedMedia\ComplexCompatibleFilter;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Media\AdvancedMedia;
+use kilyakus\helper\media\extensions\Media\Video;
 
 class PadFilter implements VideoFilterInterface, ComplexCompatibleFilter
 {

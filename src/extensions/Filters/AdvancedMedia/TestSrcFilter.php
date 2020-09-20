@@ -2,7 +2,7 @@
 
 namespace kilyakus\helper\media\extensions\Filters\AdvancedMedia;
 
-use FFMpeg\Media\AdvancedMedia;
+use kilyakus\helper\media\extensions\Media\AdvancedMedia;
 
 /**
  * This filter builds various types of computed inputs.

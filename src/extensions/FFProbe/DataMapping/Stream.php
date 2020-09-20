@@ -11,9 +11,9 @@
 
 namespace kilyakus\helper\media\extensions\FFProbe\DataMapping;
 
-use FFMpeg\Exception\LogicException;
-use FFMpeg\Exception\RuntimeException;
-use FFMpeg\Coordinate\Dimension;
+use kilyakus\helper\media\extensions\Exception\LogicException;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Coordinate\Dimension;
 
 class Stream extends AbstractData
 {

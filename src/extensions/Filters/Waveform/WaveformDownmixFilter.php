@@ -11,8 +11,8 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Waveform;
 
-use FFMpeg\Exception\RuntimeException;
-use FFMpeg\Media\Waveform;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Media\Waveform;
 
 class WaveformDownmixFilter implements WaveformFilterInterface
 {

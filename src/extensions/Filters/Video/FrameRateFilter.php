@@ -11,9 +11,9 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Video;
 
-use FFMpeg\Coordinate\FrameRate;
-use FFMpeg\Media\Video;
-use FFMpeg\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Coordinate\FrameRate;
+use kilyakus\helper\media\extensions\Media\Video;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
 
 class FrameRateFilter implements VideoFilterInterface
 {

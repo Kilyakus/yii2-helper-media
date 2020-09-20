@@ -10,17 +10,17 @@
 namespace kilyakus\helper\media\extensions\Media;
 
 use Alchemy\BinaryDriver\Exception\ExecutionFailureException;
-use FFMpeg\Filters\Audio\SimpleFilter;
-use FFMpeg\Exception\InvalidArgumentException;
-use FFMpeg\Exception\RuntimeException;
-use FFMpeg\Filters\Video\VideoFilters;
-use FFMpeg\Filters\FilterInterface;
-use FFMpeg\Format\FormatInterface;
-use FFMpeg\Format\ProgressableInterface;
-use FFMpeg\Format\AudioInterface;
-use FFMpeg\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Filters\Audio\SimpleFilter;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Filters\Video\VideoFilters;
+use kilyakus\helper\media\extensions\Filters\FilterInterface;
+use kilyakus\helper\media\extensions\Format\FormatInterface;
+use kilyakus\helper\media\extensions\Format\ProgressableInterface;
+use kilyakus\helper\media\extensions\Format\AudioInterface;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
 use Neutron\TemporaryFilesystem\Manager as FsManager;
-use FFMpeg\Filters\Video\ClipFilter;
+use kilyakus\helper\media\extensions\Filters\Video\ClipFilter;
 
 abstract class AbstractVideo extends Audio
 {

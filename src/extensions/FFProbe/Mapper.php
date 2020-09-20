@@ -11,11 +11,11 @@
 
 namespace kilyakus\helper\media\extensions\FFProbe;
 
-use FFMpeg\FFProbe;
-use FFMpeg\FFProbe\DataMapping\Format;
-use FFMpeg\FFProbe\DataMapping\StreamCollection;
-use FFMpeg\FFProbe\DataMapping\Stream;
-use FFMpeg\Exception\InvalidArgumentException;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\FFProbe\DataMapping\Format;
+use kilyakus\helper\media\extensions\FFProbe\DataMapping\StreamCollection;
+use kilyakus\helper\media\extensions\FFProbe\DataMapping\Stream;
+use kilyakus\helper\media\extensions\Exception\InvalidArgumentException;
 
 class Mapper implements MapperInterface
 {

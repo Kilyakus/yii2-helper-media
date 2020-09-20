@@ -11,7 +11,7 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Concat;
 
-use FFMpeg\Media\Concat;
+use kilyakus\helper\media\extensions\Media\Concat;
 
 class ConcatFilters
 {

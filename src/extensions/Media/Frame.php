@@ -12,12 +12,12 @@
 namespace kilyakus\helper\media\extensions\Media;
 
 use Alchemy\BinaryDriver\Exception\ExecutionFailureException;
-use FFMpeg\Filters\Frame\FrameFilterInterface;
-use FFMpeg\Filters\Frame\FrameFilters;
-use FFMpeg\Driver\FFMpegDriver;
-use FFMpeg\FFProbe;
-use FFMpeg\Exception\RuntimeException;
-use FFMpeg\Coordinate\TimeCode;
+use kilyakus\helper\media\extensions\Filters\Frame\FrameFilterInterface;
+use kilyakus\helper\media\extensions\Filters\Frame\FrameFilters;
+use kilyakus\helper\media\extensions\Driver\FFMpegDriver;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Coordinate\TimeCode;
 
 class Frame extends AbstractMediaType
 {

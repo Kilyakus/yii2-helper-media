@@ -11,7 +11,7 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Gif;
 
-use FFMpeg\Media\Gif;
+use kilyakus\helper\media\extensions\Media\Gif;
 
 class GifFilters
 {

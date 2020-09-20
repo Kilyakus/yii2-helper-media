@@ -11,9 +11,9 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Audio;
 
-use FFMpeg\Filters\FilterInterface;
-use FFMpeg\Format\AudioInterface;
-use FFMpeg\Media\Audio;
+use kilyakus\helper\media\extensions\Filters\FilterInterface;
+use kilyakus\helper\media\extensions\Format\AudioInterface;
+use kilyakus\helper\media\extensions\Media\Audio;
 
 interface AudioFilterInterface extends FilterInterface
 {

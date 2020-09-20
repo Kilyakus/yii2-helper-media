@@ -11,9 +11,9 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Video;
 
-use FFMpeg\Format\VideoInterface;
-use FFMpeg\Media\Video;
-use FFMpeg\Coordinate\TimeCode;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Media\Video;
+use kilyakus\helper\media\extensions\Coordinate\TimeCode;
 
 class ClipFilter implements VideoFilterInterface
 {

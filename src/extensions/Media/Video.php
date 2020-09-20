@@ -9,8 +9,8 @@
  */
 namespace kilyakus\helper\media\extensions\Media;
 
-use FFMpeg\Coordinate\TimeCode;
-use FFMpeg\Coordinate\Dimension;
+use kilyakus\helper\media\extensions\Coordinate\TimeCode;
+use kilyakus\helper\media\extensions\Coordinate\Dimension;
 
 class Video extends AbstractVideo
 {

@@ -13,8 +13,8 @@ namespace kilyakus\helper\media\extensions\Format\ProgressListener;
 
 use Alchemy\BinaryDriver\Listeners\ListenerInterface;
 use Evenement\EventEmitter;
-use FFMpeg\FFProbe;
-use FFMpeg\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
 
 /**
  * @author Robert Gruendler <r.gruendler@gmail.com>

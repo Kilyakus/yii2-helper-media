@@ -11,8 +11,8 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Gif;
 
-use FFMpeg\Filters\FilterInterface;
-use FFMpeg\Media\Gif;
+use kilyakus\helper\media\extensions\Filters\FilterInterface;
+use kilyakus\helper\media\extensions\Media\Gif;
 
 interface GifFilterInterface extends FilterInterface
 {

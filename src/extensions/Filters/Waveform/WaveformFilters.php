@@ -11,7 +11,7 @@
 
 namespace kilyakus\helper\media\extensions\Filters\Waveform;
 
-use FFMpeg\Media\Waveform;
+use kilyakus\helper\media\extensions\Media\Waveform;
 
 class WaveformFilters
 {

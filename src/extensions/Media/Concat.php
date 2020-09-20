@@ -13,17 +13,17 @@ namespace kilyakus\helper\media\extensions\Media;
 
 use Alchemy\BinaryDriver\Exception\ExecutionFailureException;
 use Alchemy\BinaryDriver\Exception\InvalidArgumentException;
-use FFMpeg\Filters\Concat\ConcatFilterInterface;
-use FFMpeg\Filters\Concat\ConcatFilters;
-use FFMpeg\Driver\FFMpegDriver;
-use FFMpeg\FFProbe;
-use FFMpeg\Filters\Audio\SimpleFilter;
-use FFMpeg\Exception\RuntimeException;
-use FFMpeg\Format\FormatInterface;
-use FFMpeg\Filters\FilterInterface;
-use FFMpeg\Format\ProgressableInterface;
-use FFMpeg\Format\AudioInterface;
-use FFMpeg\Format\VideoInterface;
+use kilyakus\helper\media\extensions\Filters\Concat\ConcatFilterInterface;
+use kilyakus\helper\media\extensions\Filters\Concat\ConcatFilters;
+use kilyakus\helper\media\extensions\Driver\FFMpegDriver;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Filters\Audio\SimpleFilter;
+use kilyakus\helper\media\extensions\Exception\RuntimeException;
+use kilyakus\helper\media\extensions\Format\FormatInterface;
+use kilyakus\helper\media\extensions\Filters\FilterInterface;
+use kilyakus\helper\media\extensions\Format\ProgressableInterface;
+use kilyakus\helper\media\extensions\Format\AudioInterface;
+use kilyakus\helper\media\extensions\Format\VideoInterface;
 use Neutron\TemporaryFilesystem\Manager as FsManager;
 
 class Concat extends AbstractMediaType
