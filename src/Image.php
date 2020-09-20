@@ -7,17 +7,12 @@ use yii\web\HttpException;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
 use yii\helpers\FileHelper;
+use kilyakus\helper\media\extensions\GD;
 
 class Image
 {
 	public static function upload(UploadedFile $fileInstance, $dir = '', $resizeWidth = null, $resizeHeight = null, $resizeCrop = false)
 	{
-		// $memoryLimit = (1024 ** 2) * 10;
-
-		// if($fileInstance->size >= $memoryLimit){
-		//	 throw new HttpException(500, 'Cannot upload file "'.$fileName.'". Allowed memory size of ' . $fileInstance->size . ' bytes exhausted tried to allocate ' . $memoryLimit . ' bytes');
-		// }
-
 		$pathInfo = pathinfo($fileInstance);
 
 		list($width, $height) = getimagesize($fileInstance->tempName);

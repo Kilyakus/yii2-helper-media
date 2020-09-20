@@ -1,5 +1,7 @@
 <?php
-namespace kilyakus\helper\media;
+namespace kilyakus\helper\media\extensions;
+
+use kilyakus\helper\media\Upload;
 
 class GD
 {
@@ -10,27 +12,22 @@ class GD
 
 	public function __construct($file)
 	{
-		// $memoryLimit = (1024 ** 2) * 10;
+		$imageData = getimagesize($file);
+		$this->_mime = image_type_to_mime_type($imageData[2]);
+		$this->_width = $imageData[0];
+		$this->_height = $imageData[1];
 		
-		// if (file_exists($file) && filesize($file) < $memoryLimit) // надо будет filesize($file) < 10000000 попробовать на memory_get_usage() поменять, надо будет сначала потестить.
-		// {
-			$imageData = getimagesize($file);
-			$this->_mime = image_type_to_mime_type($imageData[2]);
-			$this->_width = $imageData[0];
-			$this->_height = $imageData[1];
-			
-			switch ($this->_mime) {
-				case 'image/jpeg':
-					$this->_image = imagecreatefromjpeg($file);
-					break;
-				case 'image/png':
-					$this->_image = static::imagecreatelessalpha($file); //imagecreatefrompng($file);
-					break;
-				case 'image/gif':
-					$this->_image = imagecreatefromgif($file);
-					break;
-			}
-		// }
+		switch ($this->_mime) {
+			case 'image/jpeg':
+				$this->_image = imagecreatefromjpeg($file);
+				break;
+			case 'image/png':
+				$this->_image = static::imagecreatelessalpha($file); //imagecreatefrompng($file);
+				break;
+			case 'image/gif':
+				$this->_image = imagecreatefromgif($file);
+				break;
+		}
 	}
 
 	protected function imagecreatelessalpha($file)

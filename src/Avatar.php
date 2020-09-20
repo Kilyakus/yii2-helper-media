@@ -151,7 +151,7 @@ class Avatar
 
         $fileName = 'collage_' . md5($fileName);
 
-        $imagePath = Yii::getAlias('@webroot') . DIRECTORY_SEPARATOR . Upload::$UPLOADS_DIR . DIRECTORY_SEPARATOR . 'avatars' . DIRECTORY_SEPARATOR . $fileName . '.';
+        $imagePath = Yii::getAlias('@webroot') . DIRECTORY_SEPARATOR . Upload::$UPLOADS_DIR . DIRECTORY_SEPARATOR . 'collages' . DIRECTORY_SEPARATOR . $fileName . '.';
 
         $imageExt = (strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false) ? 'webp' : 'jpg';
 
@@ -163,7 +163,7 @@ class Avatar
 
         imagedestroy($resImage);
 
-        $thumbFile = '/' . Upload::$UPLOADS_DIR . '/avatars/' . $fileName . '.' . $imageExt;
+        $thumbFile = '/' . Upload::$UPLOADS_DIR . '/collages/' . $fileName . '.' . $imageExt;
 
         return $thumbFile;
     }

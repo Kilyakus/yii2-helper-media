@@ -3,7 +3,6 @@ namespace kilyakus\helper\media;
 
 use Yii;
 use yii\helpers\Html;
-use kilyakus\helper\media\bundles as Bundle;
 
 class Parallax
 {
@@ -44,7 +43,7 @@ class Parallax
 
         $view = Yii::$app->view;
 
-        Bundle\ParallaxAsset::register($view);
+        ParallaxAsset::register($view);
 
         return $attributes;
     }
