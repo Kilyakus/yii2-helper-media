@@ -3,35 +3,69 @@ namespace kilyakus\helper\media;
 
 use Yii;
 use kilyakus\helper\media\extensions as Extension;
+use kilyakus\helper\media\extensions\FFMpeg;
+use kilyakus\helper\media\extensions\FFProbe;
+use kilyakus\helper\media\extensions\Coordinate\TimeCode;
+use kilyakus\helper\media\extensions\Coordinate\Dimension;
 
 class Video
 {
-	static function thumb($inputFile, $width = 640, $height = 360, $fromSeconds = 0)
+	protected function config($timeout = 3600, $threads = 12)
 	{
-		if (self::fileExists($inputFile)) {
-			$ffmpeg = Extension\FFMpeg::create([
-				'ffmpeg.binaries'	=>	Yii::getAlias('@webroot') . '/vendor/kilyakus/yii2-helper-media/src/assets/ffmpeg/bin/ffmpeg.exe',
-				'ffprobe.binaries'	=>	Yii::getAlias('@webroot') . '/vendor/kilyakus/yii2-helper-media/src/assets/ffmpeg/bin/ffprobe.exe',
-				'timeout'			=>	3600,
-				'ffmpeg.threads'	=>	12,
-			]);
-			$video = $ffmpeg->open($inputFile);
-			var_dump($ffmpeg);die;
-			$video
-				->filters()
-				->resize(new \Extension\Coordinate\Dimension($width, $height))
-				->synchronize();
-			$video
-				->frame(\Extension\Coordinate\TimeCode::fromSeconds($fromSeconds))
-				->save(Yii::getAlias('@webroot') . DIRECTORY_SEPARATOR . Upload::$UPLOADS_DIR . '/videos/' . $fileName . '.jpg');
+		return [
+			'ffmpeg.binaries'	=>	Yii::getAlias('@webroot') . '/vendor/kilyakus/yii2-helper-media/src/assets/ffmpeg/bin/ffmpeg.exe',
+			'ffprobe.binaries'	=>	Yii::getAlias('@webroot') . '/vendor/kilyakus/yii2-helper-media/src/assets/ffmpeg/bin/ffprobe.exe',
+			'timeout'			=>	$timeout,
+			'ffmpeg.threads'	=>	$threads,
+		];
+	}
 
-			return Yii::getAlias('@webroot') . DIRECTORY_SEPARATOR . Upload::$UPLOADS_DIR . '/videos/' . $fileName . '.jpg';
-		} else {
+	static function createFFMpeg($inputFile, $timeout = null, $threads = null)
+	{
+		if (!self::fileExists($inputFile))
 			return false;
+
+		return $ffmpeg = FFMpeg::create(static::config($timeout, $threads))->open($inputFile);
+	}
+
+	static function createFFProbe($timeout = null, $threads = null)
+	{
+		return $ffmpeg = FFProbe::create(static::config($timeout, $threads));
+	}
+
+	static function frame($inputFile, $outputFile, $timeCode = null)
+	{
+		if($file = static::createFFMpeg($inputFile))
+		{
+			$timeCode = $timeCode ?? rand(0, (int)static::createFFProbe()->format($inputFile)->get('duration'));
+
+			$file
+				->frame(TimeCode::fromSeconds($timeCode))
+				->save(Yii::getAlias('@webroot') . $outputFile);
+
+			return $outputFile;
 		}
 	}
 
-	public function fileExists($path)
+	static function webm($inputFile, $outputFile, $width = 1920, $height = 1080, $timeCode = 0)
+	{
+		if($file = static::create($inputFile))
+		{
+			$file
+				->filters()
+				->resize(new Dimension($width, $height))
+				->synchronize();
+			$file
+				->frame(TimeCode::fromSeconds($timeCode))
+				->save($outputFile);
+
+			$file->save(new Extension\Format\Video\WebM(), Yii::getAlias('@webroot') . '/uploads/videos/export-webm.webm');
+
+			return $outputFile;
+		}
+	}
+
+	protected function fileExists($path)
 	{
 		return (@fopen($path, "r") == true);
 	}
