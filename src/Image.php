@@ -45,7 +45,7 @@ class Image
 		return Upload::getLink($fileName);
 	}
 
-	static function thumb($inputFile, $width = null, $height = null, $crop = true)
+	static function thumb($inputFile, $width = null, $height = null, $crop = true, $thumbExt = null)
 	{
 		if(!empty($inputFile) && ($path = Yii::getAlias('@webroot') . $inputFile) && is_file($path))
 		{
@@ -67,12 +67,15 @@ class Image
 
 		$imageData = pathinfo($path);
 
-		if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false){
-			$thumbExt = 'webp';
-		}elseif($imageData['extension'] == 'png' && Upload::getImageAlphaChannel($path) === false){
-			$thumbExt = 'jpg';
-		}else{
-			$thumbExt = $imageData['extension'];
+		if(!$thumbExt)
+		{
+			if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false){
+				$thumbExt = 'webp';
+			}elseif($imageData['extension'] == 'png' && Upload::getImageAlphaChannel($path) === false){
+				$thumbExt = 'jpg';
+			}else{
+				$thumbExt = $imageData['extension'];
+			}
 		}
 
 		$thumbFile = Yii::getAlias('@webroot') . DIRECTORY_SEPARATOR . Upload::$UPLOADS_DIR . DIRECTORY_SEPARATOR . 'thumbs' . DIRECTORY_SEPARATOR . $thumbName . '.' . $thumbExt;

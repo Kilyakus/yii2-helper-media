@@ -39,9 +39,7 @@ class Video
 		{
 			$timeCode = $timeCode ?? rand(0, (int)static::createFFProbe()->format($inputFile)->get('duration'));
 
-			$file
-				->frame(TimeCode::fromSeconds($timeCode))
-				->save(Yii::getAlias('@webroot') . $outputFile);
+			$file->frame(TimeCode::fromSeconds($timeCode))->save(Yii::getAlias('@webroot') . $outputFile);
 
 			return $outputFile;
 		}
@@ -55,9 +53,6 @@ class Video
 				->filters()
 				->resize(new Dimension($width, $height))
 				->synchronize();
-			$file
-				->frame(TimeCode::fromSeconds($timeCode))
-				->save($outputFile);
 
 			$file->save(new Extension\Format\Video\WebM(), Yii::getAlias('@webroot') . '/uploads/videos/export-webm.webm');
 
